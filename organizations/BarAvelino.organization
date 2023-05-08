@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="BarAvelino">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="nico.redondo">
+      <firstName>Nico</firstName>
+      <lastName>Redondo</lastName>
+      <jobTitle>Supervisor</jobTitle>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="jose.perez">
+      <firstName>Jose</firstName>
+      <lastName>Pérez</lastName>
+      <jobTitle>Empleado</jobTitle>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="walter.bates">
+      <firstName>Walter</firstName>
+      <lastName>Bates</lastName>
+      <jobTitle>Empleado</jobTitle>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Cliente">
+      <displayName>Cliente</displayName>
+    </role>
+    <role name="Cocinero">
+      <displayName>Cocinero</displayName>
+    </role>
+    <role name="Camarero">
+      <displayName>Camarero</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Internos">
+      <displayName>Internos</displayName>
+    </group>
+    <group name="Externos">
+      <displayName>Externos</displayName>
+    </group>
+    <group name="Cocina" parentPath="/Internos">
+      <displayName>Cocina</displayName>
+    </group>
+    <group name="Sala" parentPath="/Internos">
+      <displayName>Sala</displayName>
+    </group>
+    <group name="Gestión" parentPath="/Internos">
+      <displayName>Gestión</displayName>
+    </group>
+    <group name="Prov" parentPath="/Externos">
+      <displayName>Prov</displayName>
+    </group>
+    <group name="Clientes" parentPath="/Externos">
+      <displayName>Clientes</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Cliente</roleName>
+      <groupName>Externos</groupName>
+    </membership>
+    <membership>
+      <userName>nico.redondo</userName>
+      <roleName>Cocinero</roleName>
+      <groupName>Internos</groupName>
+    </membership>
+    <membership>
+      <userName>jose.perez</userName>
+      <roleName>Cliente</roleName>
+      <groupName>Externos</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
